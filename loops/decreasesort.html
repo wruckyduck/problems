@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function DecreaseSort (arr) {
+            sorted = []
+            dropping = arr
+            for (i = 0; i < arr.length; i++)
+                max = -1000;
+                let counter; 
+                console.log("i is" + i)
+                for (j = 0; j < dropping.length; j++) {
+                    if (dropping[j] > max) {
+                        max = dropping[j];
+                        counter = j; 
+                    }
+                    console.log("j is " + j)
+                }
+                //we use unshift to move elements to the front
+                console.log(sorted)
+                sorted.unshift(dropping[max])
+                dropping.splice(counter, 1)
+        
+        return sorted
+        }
+        console.log(DecreaseSort([5, 1, 2, 9, 6, 7, 4, 3]))
+        
+
+
+
+
+    </script>
+</body>
+</html>
